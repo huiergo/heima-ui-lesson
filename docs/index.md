@@ -1,9 +1,9 @@
 ---
 hero:
-  title: heima-ui-lesson
-  desc: heima-ui-lesson site example
+  title: heima-ui
+  desc: this is a simple ui lib
   actions:
-    - text: Getting Started
+    - text: 开始
       link: /components
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
