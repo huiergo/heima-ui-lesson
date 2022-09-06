@@ -1,0 +1,105 @@
+@import '../style/common.less';
+
+.themes-container {
+  z-index: 1000;
+  width: 350px;
+  padding: 20px;
+  text-align: right;
+  background: var(--bg);
+  border-left: var(--border);
+}
+
+.themes-container.active {
+  right: 0;
+}
+
+.themes-container #theme-close {
+  color: var(--black);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.themes-container h3 {
+  margin: 20px 0;
+  padding: 15px 0;
+  color: var(--black);
+  text-align: center;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.themes-container .theme-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themes-container .theme-toggler span {
+  color: var(--light-color);
+}
+
+.themes-container .theme-toggler .toggler {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  background: var(--light-bg);
+  border: var(--border);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-toggler .toggler::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 28px;
+  height: 28px;
+  background: var(--main-color);
+  border-radius: 50%;
+  transition: 0.2s linear;
+  content: '';
+}
+
+.themes-container .theme-toggler.active .toggler::before {
+  left: 65px;
+}
+
+.themes-container .theme-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.themes-container .theme-colors .color {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .color:hover {
+  opacity: 0.5;
+}
+
+//  demo 样式: 模拟在业务中的页面
+.demo-body {
+  background: var(--light-bg);
+}
+
+.demo-body.active {
+  --black: #fff;
+  --bg: #262626;
+  --light-bg: #333;
+  --light-color: #eee;
+  --border: 1px solid rgba(255, 255, 255, 0.1);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.horizon-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+}
